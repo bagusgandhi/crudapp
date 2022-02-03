@@ -1,11 +1,15 @@
-<tr>
-    <td>1</td>
-    <td>Gandhi</td>
-    <td>vhiolite@gmail.com</td>
-    <td>male</td>
-    <td>Active</td>
-    <td>
-        <a href="/update-user">Edit</a>
-        <a href="">Delete</a>
-    </td>
-</tr>
+<% for(let i = 0; i < users.length; i++){%> 
+    <tr>
+        <td><%= i + 1  %></td>
+        <td><%= users[i].name %></td>
+        <td><%= users[i].email %></td>
+        <td><%= users[i].gender %></td>
+        <td><%= users[i].status %></td>
+        <td>
+            <a href="/update-user?id=<%= users[i]._id %>">Edit</a>
+            <a data-id=<%= users[i]._id%> >Delete</a>
+        </td>
+    </tr>
+<%} %>
+
+
