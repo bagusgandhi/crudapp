@@ -7,7 +7,7 @@
         <td><%= users[i].status %></td>
         <td>
             <a href="/update-user?id=<%= users[i]._id %>">Edit</a>
-            <a data-id=<%= users[i]._id%> >Delete</a>
+            <a class="delete" data-id=<%= users[i]._id%> >Delete</a>
         </td>
     </tr>
 <%} %>
