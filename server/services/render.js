@@ -6,7 +6,7 @@ exports.homeRoute = (req, res)=>{
     axios.get('http://localhost:3000/api/users')
     .then(function(response){
         res.render('index', {users:response.data})
-        console.log(response.data)
+        // console.log(response.data)
     }).catch(err => {
         res.send(err)
     });  
